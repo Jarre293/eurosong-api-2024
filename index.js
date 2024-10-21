@@ -4,9 +4,16 @@ const express = require('express');
 //Aanmaken van een express app
 const app = express();
 
-//Endpoints
+//Endpoints , req = request, res = wat je teruggeeft
 app.get('/', (req, res) => {
     res.send('Hello World!');
+});
+
+app.get('/api/artists', (req, res) => {
+    res.send([
+        "JB",
+        "Beyonce",
+]);
 });
 
 //Starten van de server en op welke port de server draait.
